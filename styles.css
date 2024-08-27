@@ -1,0 +1,135 @@
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body, html {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 2;
+            width: 90%;
+            max-width: 600px;
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #00f5a0, #00d9f5, #ff00d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 5s ease-in-out infinite;
+            background-size: 300% 300%;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .social-icons {
+            margin-top: 1.5rem;
+        }
+
+            .social-icons a {
+                color: #fff;
+                font-size: 1.5rem;
+                margin: 0 0.75rem;
+                text-decoration: none;
+                transition: all 0.3s;
+            }
+
+                .social-icons a:hover {
+                    color: #00f5a0;
+                    transform: translateY(-5px);
+                }
+
+        #countdown {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .countdown-item {
+            margin: 0.5rem;
+            text-align: center;
+        }
+
+            .countdown-item span {
+                display: block;
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(45deg, #00f5a0, #00d9f5);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .countdown-item p {
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                margin-top: 0.25rem;
+            }
+
+        @media screen and (min-width: 768px) {
+            h1 {
+                font-size: 4rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            input[type="email"] {
+                border-radius: 25px 0 0 25px;
+                margin-bottom: 0;
+            }
+
+            button {
+                border-radius: 0 25px 25px 0;
+                width: auto;
+            }
+
+            .countdown-item span {
+                font-size: 3rem;
+            }
+
+            .countdown-item p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .content {
+                max-width: 850px;
+            }
+
+            h1 {
+                font-size: 5rem;
+            }
+        }
